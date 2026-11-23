@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "metamindz",
+  "description": "Plugins and skills from Metamindz, a London tech consultancy run by fractional CTOs.",
+  "owner": {
+    "name": "Metamindz Limited",
+    "url": "https://www.metamindz.co.uk"
+  },
+  "plugins": [
+    {
+      "name": "aio-seo",
+      "source": "./plugins/aio-seo",
+      "description": "Plug-and-play SEO and AI search optimisation (AIO/GEO): technical foundations, structured data, indexing, a data-led content engine, hub pages, AI visibility checks and off-site entity work, with a guided setup wizard.",
+      "category": "marketing",
+      "tags": [
+        "seo",
+        "aio",
+        "geo",
+        "aeo",
+        "ai-search",
+        "schema",
+        "content",
+        "indexnow",
+        "llms-txt"
+      ]
+    }
+  ]
+}
