@@ -1,0 +1,25 @@
+{
+  "name": "aio-seo",
+  "displayName": "AIO & SEO Kit by Metamindz",
+  "version": "0.1.0",
+  "description": "Get found on Google and recommended by ChatGPT, Claude, Perplexity and Gemini. A guided setup wizard, technical SEO and AIO foundations, structured data, indexing, a data-led blog engine, guides, FAQ and glossary pages, AI visibility checks, page maintenance and off-site entity work, all driven from your repo. A paid Pro add-on adds comparison pages, free tools, recurring runs, tracking and agency mode.",
+  "author": {
+    "name": "Metamindz Limited",
+    "url": "https://www.metamindz.co.uk"
+  },
+  "homepage": "https://github.com/metamindz/skills/tree/main/plugins/aio-seo",
+  "repository": "https://github.com/metamindz/skills",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "aio",
+    "geo",
+    "aeo",
+    "ai-search",
+    "llms-txt",
+    "schema",
+    "json-ld",
+    "indexnow",
+    "content-marketing"
+  ]
+}

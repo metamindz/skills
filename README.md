@@ -2,6 +2,16 @@
 
 Agent skills from [Metamindz](https://www.metamindz.co.uk), a London tech consultancy run by fractional CTOs. Works with Claude Code, Cursor, Codex, Windsurf, Gemini CLI and the other agents supported by the [skills CLI](https://github.com/vercel-labs/skills).
 
+## aio-seo: AIO & SEO Kit (Claude Code plugin)
+
+Get found on Google and Bing, and be the business ChatGPT, Claude, Perplexity and Gemini name and cite. A guided setup wizard, technical SEO and AI-search foundations, structured data, indexing, a data-led content engine and off-site entity work, all run from your website's repo and shipped as pull requests. Details: [plugins/aio-seo](plugins/aio-seo/README.md).
+
+```
+/plugin marketplace add metamindz/skills
+/plugin install aio-seo@metamindz
+/aio-seo:setup
+```
+
 ## fractional-cto (Seneca)
 
 A CTO second opinion before you commit to a technical decision. The agent version of our free [AI Fractional CTO](https://www.metamindz.co.uk/tools/ai-fractional-cto) tool.

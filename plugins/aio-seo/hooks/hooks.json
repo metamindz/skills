@@ -1,0 +1,17 @@
+{
+  "description": "aio-seo: check content files against the project's house rules after each write or edit. Silent in projects without .agents/aio-seo/config.json.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/house-style.mjs\" --hook",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

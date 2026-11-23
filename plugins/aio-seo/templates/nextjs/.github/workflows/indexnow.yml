@@ -1,0 +1,60 @@
+# Submit changed public URLs to IndexNow after every successful PRODUCTION deploy.
+#
+# Triggered by the deployment_status event that Vercel, Netlify and most Git-connected hosts send to
+# GitHub. Preview deploys are ignored. Needs:
+#   - repo variable INDEXNOW_KEY (the key is public by design; it is also served at /<key>.txt)
+#   - optional repo variable SITE_URL (defaults to PRODUCTION_URL in lib/seo/site.ts)
+#   - optional repo variable PRODUCTION_ENVIRONMENT (defaults to "Production", Vercel's name)
+# Install only when config `indexing.submit` is "after-deploy".
+name: IndexNow
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "changed = URLs touched by the deployed commit; sitemap = every sitemap URL (optionally since a date)"
+        type: choice
+        options: [changed, sitemap]
+        default: changed
+      since:
+        description: "With sitemap: only URLs with lastmod on or after this date (YYYY-MM-DD)"
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == (vars.PRODUCTION_ENVIRONMENT || 'Production'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY }}
+      HOST_ARGS: ${{ vars.SITE_URL && format('--host {0}', vars.SITE_URL) || '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha || github.sha }}
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Submit URLs changed by the deployed commit
+        if: github.event_name == 'deployment_status' || inputs.mode == 'changed'
+        run: npx --yes tsx@4.19.2 scripts/indexnow.ts --changed HEAD~1..HEAD $HOST_ARGS
+
+      - name: Submit sitemap URLs
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'sitemap'
+        env:
+          SINCE: ${{ inputs.since }}
+        run: npx --yes tsx@4.19.2 scripts/indexnow.ts --sitemap ${SINCE:+--since "$SINCE"} $HOST_ARGS

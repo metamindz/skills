@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "project": {
+    "name": "",
+    "legal_name": "",
+    "site_url": "",
+    "market": "UK",
+    "language": "en-GB",
+    "locale": "en_GB",
+    "currency": "GBP",
+    "prices_include_vat": true,
+    "stack": "nextjs-app-router",
+    "repo_root": ".",
+    "content_dirs": {
+      "blog": "",
+      "guides": "",
+      "compare": "",
+      "glossary": "",
+      "tools": ""
+    },
+    "url_patterns": {
+      "blog": "/blog/<slug>",
+      "guides": "/guides/<slug>",
+      "compare": "/compare/<slug>",
+      "glossary": "/glossary/<slug>",
+      "tools": "/tools/<slug>"
+    },
+    "private_paths": [
+      "/api/",
+      "/admin/",
+      "/account/"
+    ],
+    "build_commands": {
+      "lint": "",
+      "typecheck": "",
+      "test": "",
+      "build": ""
+    }
+  },
+  "entity": {
+    "entity_line": "",
+    "short_description": "",
+    "category": "",
+    "disambiguation": "",
+    "founded": "",
+    "logo_path": "/logo.png",
+    "contact_email": "",
+    "phone": "",
+    "address": {
+      "street": "",
+      "locality": "",
+      "region": "",
+      "postal_code": "",
+      "country": "GB"
+    },
+    "company_number": "",
+    "vat_number": "",
+    "people": [
+      {
+        "name": "",
+        "job_title": "",
+        "slug": "",
+        "same_as": []
+      }
+    ],
+    "same_as": [],
+    "area_served": [
+      "GB"
+    ],
+    "knows_about": []
+  },
+  "offer": [
+    {
+      "name": "",
+      "type": "service",
+      "weight": 1.0,
+      "url": "",
+      "keywords": [],
+      "price_from": "",
+      "audience": ""
+    }
+  ],
+  "audiences": [],
+  "competitors": [
+    {
+      "name": "",
+      "url": "",
+      "competes_on": []
+    }
+  ],
+  "branded_terms": [],
+  "excluded_patterns": [
+    "jobs",
+    "careers",
+    "salary",
+    "vacancies",
+    "job description"
+  ],
+  "data": {
+    "provider": "openseo",
+    "openseo_project_id": "",
+    "credit_budget_per_run": 150,
+    "credit_budget_per_month": 2000,
+    "ai_visibility_tracker_id": "",
+    "rank_tracker_id": "",
+    "fallback": "manual-exports",
+    "scheduled_paid": {
+      "site_audit": false,
+      "site_audit_max_pages": 500,
+      "ai_visibility_check": false,
+      "indexnow_submit": true
+    }
+  },
+  "indexing": {
+    "indexnow_key": "",
+    "indexnow_key_path": "",
+    "submit": "after-deploy",
+    "search_console_verified": false,
+    "bing_verified": false,
+    "google_site_verification": "",
+    "bing_site_verification": ""
+  },
+  "house_rules": {
+    "spelling": "British English",
+    "author": "",
+    "voice_skill": "",
+    "banned_characters": [
+      "\u2014",
+      "\u2013"
+    ],
+    "banned_phrases": [
+      "it's not X, it's Y",
+      "here's the thing",
+      "let's be honest",
+      "in today's fast-paced world",
+      "game-changing",
+      "unlock the power",
+      "delve"
+    ],
+    "check_globs": [
+      "content/**/*.md",
+      "content/**/*.mdx"
+    ],
+    "compliance": [
+      "uk-cap-code",
+      "uk-dmcc-reviews",
+      "uk-gdpr",
+      "pecr"
+    ]
+  },
+  "blog": {
+    "enabled": true,
+    "word_count": [
+      1500,
+      3000
+    ],
+    "categories": [],
+    "gsc_range": "last_3_months",
+    "ga4_lookback_days": 90,
+    "min_impressions_striking": 50,
+    "min_impressions_buried": 200,
+    "target_ctr": 0.1,
+    "min_high_value_queries": 5,
+    "measurement_window_weeks": 16,
+    "competitor_research_every_n_runs": 4,
+    "maintenance_every_n_runs": 3,
+    "max_maintenance_jobs_per_run": 3,
+    "format": "mdx",
+    "frontmatter_example": "",
+    "ship_mode": "pr",
+    "status": "draft",
+    "images": {
+      "enabled": false,
+      "command": "",
+      "style_guide": "",
+      "min": 2,
+      "max": 4
+    },
+    "callouts": {
+      "min_per_post": 1,
+      "words_per_callout": 700,
+      "component": "",
+      "ga4_event": ""
+    },
+    "community_research": {
+      "enabled": true,
+      "max_runs_per_post": 3
+    },
+    "distribution": {
+      "linkedin": true,
+      "x": false
+    },
+    "ctr_rewrite_below": 0.03
+  },
+  "pages": {
+    "enabled": [
+      "guides",
+      "faq",
+      "compare",
+      "alternatives",
+      "glossary",
+      "use-cases"
+    ],
+    "compare_checked_within_days": 90
+  },
+  "tools": {
+    "enabled": false,
+    "uses_llm": false,
+    "model_env": "TOOLS_MODEL",
+    "daily_token_budget": 1000000,
+    "monthly_token_budget": 20000000,
+    "runs_per_person_per_day": 10,
+    "health_url": "",
+    "max_budget_percent_to_build": 80
+  },
+  "visibility": {
+    "engines": [
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "gemini",
+      "google-ai-overviews"
+    ],
+    "prompt_count": 25,
+    "cadence": "weekly"
+  },
+  "offsite": {
+    "directories": [],
+    "review_platforms": []
+  },
+  "sister_sites": [
+    {
+      "name": "",
+      "url": ""
+    }
+  ],
+  "notifications": {
+    "slack_channel": ""
+  },
+  "schedules": {
+    "weekly_blog": {
+      "enabled": false,
+      "cron": "0 9 * * 2"
+    },
+    "weekly_tool": {
+      "enabled": false,
+      "cron": "0 9 * * 1"
+    },
+    "weekly_visibility": {
+      "enabled": false,
+      "cron": "0 8 * * 5"
+    },
+    "weekly_indexing": {
+      "enabled": false,
+      "cron": "0 8 * * 3"
+    },
+    "monthly_maintenance": {
+      "enabled": false,
+      "cron": "0 9 1 * *"
+    },
+    "monthly_audit": {
+      "enabled": false,
+      "cron": "0 9 15 * *"
+    }
+  },
+  "git": {
+    "pull_before_run": false,
+    "ship_mode": "pr",
+    "branch_prefix": "aio-seo/",
+    "commit_state": true,
+    "push": false
+  },
+  "crawlers": {
+    "training": "allow",
+    "bulk": "block",
+    "google_extended": "allow",
+    "applebot_extended": "allow",
+    "content_signal": "search=yes, ai-input=yes, ai-train=yes"
+  }
+}
