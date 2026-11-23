@@ -58,7 +58,7 @@ Also included: three subagents (`seo-auditor`, `fact-checker`, `content-reviewer
 
 ## Pro
 
-AIO & SEO Kit Pro is a paid add-on with comparison and alternatives pages, weekly free tools, recurring runs, AI visibility tracking, advanced maintenance and agency mode. See https://www.metamindz.co.uk.
+AIO & SEO Kit Pro is a paid add-on: recurring runs (autopilot), listings filled in your Chrome from one asset request, the authority programme (reviews, directories, earned mentions), comparison and alternatives pages, weekly free tools, AI visibility tracking, advanced maintenance and agency mode. £370 plus VAT, paid once, with lifetime updates; your licence key installs it with one command. See https://www.metamindz.co.uk/aio-seo-kit.
 
 ## Data source: OpenSEO (recommended)
 
